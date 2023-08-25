@@ -1,2 +1,25 @@
 <h1>Tests#new</h1>
 <p>Find me in app/views/tests/new.html.erb</p>
+
+<h3>ユーザー新規作成</h3>
+<%# <%= render "shared/error" , obj: @plan %> %>
+<%= form_with model: @User do |u| %>
+  <table>
+    <tr>
+      <th>
+        <%= u.label :name, "タイトル" %>
+      </th>
+      <td>
+        <%= u.text_field :title %>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <p>
+      <%= u.submit "登録完了する" %>
+    </p>
+    <p>
+      <%= link_to "ユーザー情報一覧に戻る" , :plans %>
+    </p>
+  </div>
+<% end %>

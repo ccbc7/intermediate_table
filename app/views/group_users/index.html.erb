@@ -1,0 +1,23 @@
+<h1>Group Users</h1>
+<table border="1">
+  <thead>
+    <tr>
+      <th>グループ名</th>
+      <th>ユーザー名</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @group_users.each do |group_user| %>
+      <tr>
+        <td><%= group_user.group.name %></td>
+        <td><%= group_user.user.name %></td>
+        <td>
+          <%= link_to "グループから脱退", group_user_path(group_user), data: { turbo_method: :delete } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Back to Groups", groups_path %>

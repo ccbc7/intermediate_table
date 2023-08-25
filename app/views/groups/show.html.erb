@@ -1,0 +1,24 @@
+<h1><%= @group.name %></h1>
+
+<ul>
+  <% @group.users.each do |user| %>
+    <li>
+      <%= user.name %>
+
+      <%= link_to "このグループから脱退", group_user_path(id: GroupUser.find_by(user: user, group: @group).id), data: { turbo_method: :delete, confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>ユーザーをグループに加入させる</h2>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= user.name %>
+      <%= link_to "Add to Group", group_users_path(user_id: user.id, group_id: @group.id), data: { turbo_method: :post } %>
+
+    </li>
+  <% end %>
+</ul>
+<p><%= link_to "グループ一覧", groups_path%><p>
+<p><%= link_to "登録済みグループユーザー一覧", group_users_path%><p>
