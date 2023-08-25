@@ -1,6 +1,6 @@
 # 中間テーブルを作成！
 * Ruby version
-  rails7
+  *rails7
 * System dependencies
   docker-compose
 * Configuration
