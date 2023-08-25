@@ -1,26 +1,9 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
+# 中間テーブルを作成！
 * Ruby version
-
+  rails7
 * System dependencies
-
+  docker-compose
 * Configuration
-
+  user登録機能&グループ登録機能&グループごとにユーザーを登録する機能
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# intermediate_table
-# intermediate_table
+ postgresql
