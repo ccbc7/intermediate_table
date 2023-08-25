@@ -2,8 +2,8 @@
 * Ruby version
   * rails7
 * System dependencies
-  docker-compose
+  * docker-compose
 * Configuration
-  user登録機能&グループ登録機能&グループごとにユーザーを登録する機能
+  * user登録機能&グループ登録機能&グループごとにユーザーを登録する機能
 * Database creation
-  postgresql
+  * postgresql
